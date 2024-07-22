@@ -1,42 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>Hello World</title>
-    <url>/posts/4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>闲谈（一）</title>
-    <url>/posts/f483b24a.html</url>
-    <content><![CDATA[<blockquote>
-<ul>
-<li>由于某些事一直鸽着，在家也闲来无事(<del>游戏和视频有点烦了</del>)，折腾个博客出来玩一玩</li>
-<li>本人也是第一次搭建，这也是我第一篇博客，就先写点闲聊的话吧，顺便熟悉一下写作<br><font color=Red size=2>tip:有事鸽着无聊是一方面，另一方面是上课看老师的网站很fashion(doge)</font></li>
-</ul>
-</blockquote>
-<h1 id="开头"><a href="#开头" class="headerlink" title="开头"></a>开头</h1><h2 id="被鸽着的某事"><a href="#被鸽着的某事" class="headerlink" title="被鸽着的某事"></a>被鸽着的某事</h2><p>这事说来话长，但是长话短说<br>对于一些比赛或参加某些项目，毋庸置疑是毕业后找工作的加分项，往简历上一写更是自带金光特效，<font color=#f28500>你——就是全场最靓的仔！</font><br>作为校企合作第一批优质学员（<del>小白鼠</del>），本以为第一自带buff加成，没成想确实带了buff——debuff<br>当时企业来的teacher跟我们说，招募x个人一起去做项目……等等，做项目？听得几个人那是热血沸腾，既能做项目写简历又能挣笔外快，梦寐以求的暑假工啊。果断报名，经过层层筛选，最终确定名单有我<br>于是，这件事迎来了转折。确定下来的一行人，从早期的赶时培训，到后面没了声响，被整整鸽了几个月。不过呢，上帝关了门的同时，开了扇窗。所以好消息就是，近期有几个人接到了通知可以准备出发了。但是呢好巧不巧，窗的高度我够不着，上帝关的又是我的门，所以我到现在还是咕咕</p>
-<h1 id="中间"><a href="#中间" class="headerlink" title="中间"></a>中间</h1><h2 id="开始折腾"><a href="#开始折腾" class="headerlink" title="开始折腾"></a>开始折腾</h2><p>因为害怕起冲突，暑假也就自然没去另找暑假工。放假回家了，室友又跟进少管所似的找不着影，游戏一个人玩着也怪无聊的，整日刷视频呢也心感疲惫。突然想起课上有意思的东西——老师自己的<font color=#f28500>小网站</font>（正经网站）。反正在家也是闲着，折腾了一下这玩意，于是就有了现在你们能够看到的这副模样  </p>
-<h1 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h1><h2 id="谈谈感受"><a href="#谈谈感受" class="headerlink" title="谈谈感受"></a>谈谈感受</h2><p>说实话，一开始萌生这个想法的时候，我只想着在自己网站上存放、集成一些小工具或者收藏一些东西，免得自己浏览器收藏夹一大堆。这几天断断续续将它折腾出来之后，我其实也没想过自己会写博客，但是弄都弄好了，那就当作是玩玩嘛<br>所以呢，关于博客我也会不定时更新文章，发发闲谈（刚上手真的很不熟练，需要时间啦），感兴趣就进来看个乐子，不感兴趣就当点了个垃圾网页关闭就好</p>
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p>感谢您来到我的博客，阅读我的第一篇文章~</p>
-]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>闲谈（一）</title>
+      <link href="/posts/f483b24a.html"/>
+      <url>/posts/f483b24a.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><ul><li>由于某些事一直鸽着，在家也闲来无事(<del>游戏和视频有点烦了</del>)，折腾个博客出来玩一玩</li><li>本人也是第一次搭建，这也是我第一篇博客，就先写点闲聊的话吧，顺便熟悉一下写作<br><font color=Red size=2>tip:有事鸽着无聊是一方面，另一方面是上课看老师的网站很fashion(doge)</font></li></ul></blockquote><h1 id="开头"><a href="#开头" class="headerlink" title="开头"></a>开头</h1><h2 id="被鸽着的某事"><a href="#被鸽着的某事" class="headerlink" title="被鸽着的某事"></a>被鸽着的某事</h2><p>这事说来话长，但是长话短说<br>对于一些比赛或参加某些项目，毋庸置疑是毕业后找工作的加分项，往简历上一写更是自带金光特效，<font color=#f28500>你——就是全场最靓的仔！</font><br>作为校企合作第一批优质学员（<del>小白鼠</del>），本以为第一自带buff加成，没成想确实带了buff——debuff<br>当时企业来的teacher跟我们说，招募x个人一起去做项目……等等，做项目？听得几个人那是热血沸腾，既能做项目写简历又能挣笔外快，梦寐以求的暑假工啊。果断报名，经过层层筛选，最终确定名单有我<br>于是，这件事迎来了转折。确定下来的一行人，从早期的赶时培训，到后面没了声响，被整整鸽了几个月。不过呢，上帝关了门的同时，开了扇窗。所以好消息就是，近期有几个人接到了通知可以准备出发了。但是呢好巧不巧，窗的高度我够不着，上帝关的又是我的门，所以我到现在还是咕咕</p><h1 id="中间"><a href="#中间" class="headerlink" title="中间"></a>中间</h1><h2 id="开始折腾"><a href="#开始折腾" class="headerlink" title="开始折腾"></a>开始折腾</h2><p>因为害怕起冲突，暑假也就自然没去另找暑假工。放假回家了，室友又跟进少管所似的找不着影，游戏一个人玩着也怪无聊的，整日刷视频呢也心感疲惫。突然想起课上有意思的东西——老师自己的<font color=#f28500>小网站</font>（正经网站）。反正在家也是闲着，折腾了一下这玩意，于是就有了现在你们能够看到的这副模样  </p><h1 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h1><h2 id="谈谈感受"><a href="#谈谈感受" class="headerlink" title="谈谈感受"></a>谈谈感受</h2><p>说实话，一开始萌生这个想法的时候，我只想着在自己网站上存放、集成一些小工具或者收藏一些东西，免得自己浏览器收藏夹一大堆。这几天断断续续将它折腾出来之后，我其实也没想过自己会写博客，但是弄都弄好了，那就当作是玩玩嘛<br>所以呢，关于博客我也会不定时更新文章，发发闲谈（刚上手真的很不熟练，需要时间啦），感兴趣就进来看个乐子，不感兴趣就当点了个垃圾网页关闭就好</p><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p>感谢您来到我的博客，阅读我的第一篇文章~</p>]]></content>
+      
+      
       <categories>
-        <category>闲谈</category>
+          
+          <category> 闲谈 </category>
+          
       </categories>
-      <tags>
-        <tag>闲谈</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> 闲谈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/posts/4a17b156.html"/>
+      <url>/posts/4a17b156.html</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
 </search>
