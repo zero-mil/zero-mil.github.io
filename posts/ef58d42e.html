@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>burpsuite安装步骤 | zeromilの小屋</title><meta name="author" content="zero-mil"><meta name="copyright" content="zero-mil"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="真是光阴似箭，日月如梭，距离创建自己的垃圾博客到现在，居然已经一年多了。没有买服务器的打算，也不知道有多少人会看到，所以纯当自己发泄的垃圾桶了。 也是真的很久没更新博客了，再加上自从去年毕业后基本没找到事做，水一期。   这几天没事想着再玩玩web安全那些网站，发现burpsuite打不开了，报错原因是”could not open javaw”，但java一直没动过，索性干脆全套重装，顺便把">
+<meta property="og:type" content="article">
+<meta property="og:title" content="burpsuite安装步骤">
+<meta property="og:url" content="https://zero-mil.github.io/posts/ef58d42e.html">
+<meta property="og:site_name" content="zeromilの小屋">
+<meta property="og:description" content="真是光阴似箭，日月如梭，距离创建自己的垃圾博客到现在，居然已经一年多了。没有买服务器的打算，也不知道有多少人会看到，所以纯当自己发泄的垃圾桶了。 也是真的很久没更新博客了，再加上自从去年毕业后基本没找到事做，水一期。   这几天没事想着再玩玩web安全那些网站，发现burpsuite打不开了，报错原因是”could not open javaw”，但java一直没动过，索性干脆全套重装，顺便把">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zero-mil.github.io/img/image/820e579e.jpg">
+<meta property="article:published_time" content="2026-01-10T10:42:19.000Z">
+<meta property="article:modified_time" content="2026-01-11T10:07:37.009Z">
+<meta property="article:author" content="zero-mil">
+<meta property="article:tag" content="工具">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zero-mil.github.io/img/image/820e579e.jpg"><link rel="shortcut icon" href="/./img/stand.png"><link rel="canonical" href="https://zero-mil.github.io/posts/ef58d42e.html"><link rel="preconnect" href="https://cdn.staticfile.org"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/5.0.33/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.staticfile.org/egjs-infinitegrid/4.11.1/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'burpsuite安装步骤',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-01-11 18:07:37'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load',() => { preloader.endLoading() })
+
+  if (false) {
+    document.addEventListener('pjax:send', () => { preloader.initLoading() })
+    document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+  }
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/./img/server.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/./img/image/820e579e.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="zeromilの小屋"><span class="site-name">zeromilの小屋</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">burpsuite安装步骤</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-10T10:42:19.000Z" title="发表于 2026-01-10 18:42:19">2026-01-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-11T10:07:37.009Z" title="更新于 2026-01-11 18:07:37">2026-01-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="burpsuite安装步骤"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<ul>
+<li>真是光阴似箭，日月如梭，距离创建自己的垃圾博客到现在，居然已经一年多了。没有买服务器的打算，也不知道有多少人会看到，所以纯当自己发泄的垃圾桶了。</li>
+<li>也是真的很久没更新博客了，再加上自从去年毕业后基本没找到事做，水一期。</li>
+</ul>
+</blockquote>
+<p>这几天没事想着再玩玩web安全那些网站，发现burpsuite打不开了，报错原因是”could not open javaw”，但java一直没动过，索性干脆全套重装，顺便把社区版的换一下。顺便记录一下，方便以后  </p>
+<p><font color=#ff0000>温馨提示：此文章仅作为技术分享与知识记录，只用于以防御为目的的教学演示，所有操作均在安全环境下进行，请各位勿用于其他用途，否则后果自负。</font> </p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h4 id="一、清除电脑上原有的java"><a href="#一、清除电脑上原有的java" class="headerlink" title="一、清除电脑上原有的java"></a>一、清除电脑上原有的java</h4><p>很简单，如果电脑上还存有原java的安装程序，双击打开会提示”是否覆盖安装”，点击”是”，它会先清除java，再安装，等它清完后选择不安装就好了。如果没有，那就找到安装路径，整个删了就好了  </p>
+<h4 id="二、下载JDK"><a href="#二、下载JDK" class="headerlink" title="二、下载JDK"></a>二、下载JDK</h4><p>网比较好的直接官网：<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/downloads/">https://www.oracle.com/java/technologies/downloads/</a><br>当然也有镜像网站：  </p>
+<ul>
+<li>OpenJDK（开源版本）<br>网站：<a target="_blank" rel="noopener" href="https://openjdk.org/">https://openjdk.org/</a><br>下载指南：<a target="_blank" rel="noopener" href="https://openjdk.org/install/">https://openjdk.org/install/</a>  </li>
+<li>OpenLogic<br>OpenJDK:<br>网站：<a target="_blank" rel="noopener" href="https://www.openlogic.com/openjdk-downloads">https://www.openlogic.com/openjdk-downloads</a><br>由于burpsuite从2020.4版本开始要求使用java 9及以上，所以java版本一定不能乱选。我这里选择的是安装java 25，也可以安装java 21</li>
+</ul>
+<h4 id="三、下载burpsuite"><a href="#三、下载burpsuite" class="headerlink" title="三、下载burpsuite"></a>三、下载burpsuite</h4><p>直接官网解决：<br><a target="_blank" rel="noopener" href="https://portswigger.net/burp/releases">https://portswigger.net/burp/releases</a><br>建议选择专业版，专业版相比与社区版功能更全面，可以不用但不能没有</p>
+<h4 id="四、下载burploaderkey"><a href="#四、下载burploaderkey" class="headerlink" title="四、下载burploaderkey"></a>四、下载burploaderkey</h4><p>嗯……这个忘记在哪下了，我上传了一个在我的GitHub上，<br><a target="_blank" rel="noopener" href="https://github.com/zero-mil/BurpLoaderKeygen">https://github.com/zero-mil/BurpLoaderKeygen</a></p>
+<p><font color=#ff0000>温馨提示：由于涉及到版权问题，该软件请在 Github 或 Bing 等网站自行搜索下载，仅供学习和交流使用，商业使用请购买正版软件</font>  </p>
+<h4 id="五、自行选择下载汉化插件"><a href="#五、自行选择下载汉化插件" class="headerlink" title="五、自行选择下载汉化插件"></a>五、自行选择下载汉化插件</h4><p>github项目：<a target="_blank" rel="noopener" href="https://github.com/helGayhub233/BurpSuiteCN/releases/tag/Professional">https://github.com/helGayhub233/BurpSuiteCN/releases/tag/Professional</a></p>
+<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><h4 id="一、安装、配置java环境"><a href="#一、安装、配置java环境" class="headerlink" title="一、安装、配置java环境"></a>一、安装、配置java环境</h4><p>下载好的java安装程序直接打开，下一步，然后选择安装路径，默认就行，接着下一步，等待安装完成即可<br><font color=#ff0000>注意：这里的安装路径一定要记一下，后面要考！</font><br>接着打开设置，搜索”编辑系统环境变量”，点击”环境变量”，在下方系统变量中新建两个变量：  </p>
+<ul>
+<li>变量名：JAVA_HOME<br>变量值：C:\Program Files\Java\jdk-25</li>
+</ul>
+<p><font color=#ff0000>注意：HOME的变量值要与上面你自己安装java的安装路径保持一致</font> </p>
+<ul>
+<li>变量名：CLASSPATH<br>变量值：%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar</li>
+</ul>
+<p>在上方用户变量，双击Path，点击新建后输入以下文本：<br>;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;<br><font color=#ff0000>切记一定是新建，不是删除！不是删除！不是删除！</font><br>一切设置好后点击确定，随后win+R打开cmd，输入”java -version”，有回显则安装配置成功    </p>
+<h4 id="二、安装burpsuite"><a href="#二、安装burpsuite" class="headerlink" title="二、安装burpsuite"></a>二、安装burpsuite</h4><p>双击exe安装程序，自行选择一下安装路径即可，没什么复杂的东西  </p>
+<h4 id="三、配置burpsuite"><a href="#三、配置burpsuite" class="headerlink" title="三、配置burpsuite"></a>三、配置burpsuite</h4><p>直接双击burpsuite是肯定没用的，这里需要使用到burploaderkeygen，记得放在burpsuite的安装根目录下<br>打开那个界面，会用的应该都知道怎么去激活，那我就不过多赘述了(主要是我已经激活了，流程截不了图，实在不知道的自己百度吧)  </p>
+<h4 id="四、自行选择汉化"><a href="#四、自行选择汉化" class="headerlink" title="四、自行选择汉化"></a>四、自行选择汉化</h4><p>汉化插件网址：<br><a target="_blank" rel="noopener" href="https://github.com/helGayhub233/BurpSuiteCN">https://github.com/helGayhub233/BurpSuiteCN</a><br>食用方法作者也写了，我在这也不过多赘述了  </p>
+<h2 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h2><p>那一套下来基本就结束了，可以用bp快乐的玩耍了，具体怎么食用就自己去摸索了</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://zero-mil.github.io">zero-mil</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://zero-mil.github.io/posts/ef58d42e.html">https://zero-mil.github.io/posts/ef58d42e.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://zero-mil.github.io" target="_blank">zeromilの小屋</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%B7%A5%E5%85%B7/">工具</a></div><div class="post_share"><div class="social-share" data-image="/./img/image/820e579e.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://npm.elemecdn.com/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://npm.elemecdn.com/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/9cabc5aa.html" title="闲谈2"><img class="cover" src="/./img/image/01e34c5d.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">闲谈2</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/./img/server.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zero-mil</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/zero-mil"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/zero-mil" target="_blank" title="Github"><i class="fab fa-github" style="color: #000000;"></i></a><a class="social-icon" href="https://zero-mil.github.io/iojwihoa" target="_blank" title="QQ"><i class="fab fa-qq" style="color: #000000;"></i></a><a class="social-icon" href="https://zero-mil.github.io/fojoidwp" target="_blank" title="Wechat"><i class="fab fa-weixin" style="color: #000000;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">还在完善中，不定时更新</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text">准备工作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%B8%85%E9%99%A4%E7%94%B5%E8%84%91%E4%B8%8A%E5%8E%9F%E6%9C%89%E7%9A%84java"><span class="toc-number">1.0.1.</span> <span class="toc-text">一、清除电脑上原有的java</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E4%B8%8B%E8%BD%BDJDK"><span class="toc-number">1.0.2.</span> <span class="toc-text">二、下载JDK</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%B8%8B%E8%BD%BDburpsuite"><span class="toc-number">1.0.3.</span> <span class="toc-text">三、下载burpsuite</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E4%B8%8B%E8%BD%BDburploaderkey"><span class="toc-number">1.0.4.</span> <span class="toc-text">四、下载burploaderkey</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%87%AA%E8%A1%8C%E9%80%89%E6%8B%A9%E4%B8%8B%E8%BD%BD%E6%B1%89%E5%8C%96%E6%8F%92%E4%BB%B6"><span class="toc-number">1.0.5.</span> <span class="toc-text">五、自行选择下载汉化插件</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85"><span class="toc-number">2.</span> <span class="toc-text">开始安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AE%89%E8%A3%85%E3%80%81%E9%85%8D%E7%BD%AEjava%E7%8E%AF%E5%A2%83"><span class="toc-number">2.0.1.</span> <span class="toc-text">一、安装、配置java环境</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%AE%89%E8%A3%85burpsuite"><span class="toc-number">2.0.2.</span> <span class="toc-text">二、安装burpsuite</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E9%85%8D%E7%BD%AEburpsuite"><span class="toc-number">2.0.3.</span> <span class="toc-text">三、配置burpsuite</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E8%87%AA%E8%A1%8C%E9%80%89%E6%8B%A9%E6%B1%89%E5%8C%96"><span class="toc-number">2.0.4.</span> <span class="toc-text">四、自行选择汉化</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%8C%E6%88%90"><span class="toc-number">3.</span> <span class="toc-text">完成</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/ef58d42e.html" title="burpsuite安装步骤"><img src="/./img/image/820e579e.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="burpsuite安装步骤"/></a><div class="content"><a class="title" href="/posts/ef58d42e.html" title="burpsuite安装步骤">burpsuite安装步骤</a><time datetime="2026-01-10T10:42:19.000Z" title="发表于 2026-01-10 18:42:19">2026-01-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/9cabc5aa.html" title="闲谈2"><img src="/./img/image/01e34c5d.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="闲谈2"/></a><div class="content"><a class="title" href="/posts/9cabc5aa.html" title="闲谈2">闲谈2</a><time datetime="2024-09-02T06:04:55.000Z" title="发表于 2024-09-02 14:04:55">2024-09-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/f483b24a.html" title="闲谈1"><img src="/./img/image/365c6a42.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="闲谈1"/></a><div class="content"><a class="title" href="/posts/f483b24a.html" title="闲谈1">闲谈1</a><time datetime="2024-07-17T13:54:38.000Z" title="发表于 2024-07-17 21:54:38">2024-07-17</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2024 - 2026 By zero-mil</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/5.0.33/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://npm.elemecdn.com/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script async>window.onload=function(){var a=document.createElement('script'),b=document.getElementsByTagName('script')[0];a.type='text/javascript',a.async=!0,a.src='/sw-register.js?v='+Date.now(),b.parentNode.insertBefore(a,b)};</script></body></html>

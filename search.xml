@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>burpsuite安装步骤</title>
+    <url>/posts/ef58d42e.html</url>
+    <content><![CDATA[<blockquote>
+<ul>
+<li>真是光阴似箭，日月如梭，距离创建自己的垃圾博客到现在，居然已经一年多了。没有买服务器的打算，也不知道有多少人会看到，所以纯当自己发泄的垃圾桶了。</li>
+<li>也是真的很久没更新博客了，再加上自从去年毕业后基本没找到事做，水一期。</li>
+</ul>
+</blockquote>
+<p>这几天没事想着再玩玩web安全那些网站，发现burpsuite打不开了，报错原因是”could not open javaw”，但java一直没动过，索性干脆全套重装，顺便把社区版的换一下。顺便记录一下，方便以后  </p>
+<p><font color=#ff0000>温馨提示：此文章仅作为技术分享与知识记录，只用于以防御为目的的教学演示，所有操作均在安全环境下进行，请各位勿用于其他用途，否则后果自负。</font> </p>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h4 id="一、清除电脑上原有的java"><a href="#一、清除电脑上原有的java" class="headerlink" title="一、清除电脑上原有的java"></a>一、清除电脑上原有的java</h4><p>很简单，如果电脑上还存有原java的安装程序，双击打开会提示”是否覆盖安装”，点击”是”，它会先清除java，再安装，等它清完后选择不安装就好了。如果没有，那就找到安装路径，整个删了就好了  </p>
+<h4 id="二、下载JDK"><a href="#二、下载JDK" class="headerlink" title="二、下载JDK"></a>二、下载JDK</h4><p>网比较好的直接官网：<a href="https://www.oracle.com/java/technologies/downloads/">https://www.oracle.com/java/technologies/downloads/</a><br>当然也有镜像网站：  </p>
+<ul>
+<li>OpenJDK（开源版本）<br>网站：<a href="https://openjdk.org/">https://openjdk.org/</a><br>下载指南：<a href="https://openjdk.org/install/">https://openjdk.org/install/</a>  </li>
+<li>OpenLogic<br>OpenJDK:<br>网站：<a href="https://www.openlogic.com/openjdk-downloads">https://www.openlogic.com/openjdk-downloads</a><br>由于burpsuite从2020.4版本开始要求使用java 9及以上，所以java版本一定不能乱选。我这里选择的是安装java 25，也可以安装java 21</li>
+</ul>
+<h4 id="三、下载burpsuite"><a href="#三、下载burpsuite" class="headerlink" title="三、下载burpsuite"></a>三、下载burpsuite</h4><p>直接官网解决：<br><a href="https://portswigger.net/burp/releases">https://portswigger.net/burp/releases</a><br>建议选择专业版，专业版相比与社区版功能更全面，可以不用但不能没有</p>
+<h4 id="四、下载burploaderkey"><a href="#四、下载burploaderkey" class="headerlink" title="四、下载burploaderkey"></a>四、下载burploaderkey</h4><p>嗯……这个忘记在哪下了，我上传了一个在我的GitHub上，<br><a href="https://github.com/zero-mil/BurpLoaderKeygen">https://github.com/zero-mil/BurpLoaderKeygen</a></p>
+<p><font color=#ff0000>温馨提示：由于涉及到版权问题，该软件请在 Github 或 Bing 等网站自行搜索下载，仅供学习和交流使用，商业使用请购买正版软件</font>  </p>
+<h4 id="五、自行选择下载汉化插件"><a href="#五、自行选择下载汉化插件" class="headerlink" title="五、自行选择下载汉化插件"></a>五、自行选择下载汉化插件</h4><p>github项目：<a href="https://github.com/helGayhub233/BurpSuiteCN/releases/tag/Professional">https://github.com/helGayhub233/BurpSuiteCN/releases/tag/Professional</a></p>
+<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><h4 id="一、安装、配置java环境"><a href="#一、安装、配置java环境" class="headerlink" title="一、安装、配置java环境"></a>一、安装、配置java环境</h4><p>下载好的java安装程序直接打开，下一步，然后选择安装路径，默认就行，接着下一步，等待安装完成即可<br><font color=#ff0000>注意：这里的安装路径一定要记一下，后面要考！</font><br>接着打开设置，搜索”编辑系统环境变量”，点击”环境变量”，在下方系统变量中新建两个变量：  </p>
+<ul>
+<li>变量名：JAVA_HOME<br>变量值：C:\Program Files\Java\jdk-25</li>
+</ul>
+<p><font color=#ff0000>注意：HOME的变量值要与上面你自己安装java的安装路径保持一致</font> </p>
+<ul>
+<li>变量名：CLASSPATH<br>变量值：%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar</li>
+</ul>
+<p>在上方用户变量，双击Path，点击新建后输入以下文本：<br>;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;<br><font color=#ff0000>切记一定是新建，不是删除！不是删除！不是删除！</font><br>一切设置好后点击确定，随后win+R打开cmd，输入”java -version”，有回显则安装配置成功    </p>
+<h4 id="二、安装burpsuite"><a href="#二、安装burpsuite" class="headerlink" title="二、安装burpsuite"></a>二、安装burpsuite</h4><p>双击exe安装程序，自行选择一下安装路径即可，没什么复杂的东西  </p>
+<h4 id="三、配置burpsuite"><a href="#三、配置burpsuite" class="headerlink" title="三、配置burpsuite"></a>三、配置burpsuite</h4><p>直接双击burpsuite是肯定没用的，这里需要使用到burploaderkeygen，记得放在burpsuite的安装根目录下<br>打开那个界面，会用的应该都知道怎么去激活，那我就不过多赘述了(主要是我已经激活了，流程截不了图，实在不知道的自己百度吧)  </p>
+<h4 id="四、自行选择汉化"><a href="#四、自行选择汉化" class="headerlink" title="四、自行选择汉化"></a>四、自行选择汉化</h4><p>汉化插件网址：<br><a href="https://github.com/helGayhub233/BurpSuiteCN">https://github.com/helGayhub233/BurpSuiteCN</a><br>食用方法作者也写了，我在这也不过多赘述了  </p>
+<h2 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h2><p>那一套下来基本就结束了，可以用bp快乐的玩耍了，具体怎么食用就自己去摸索了</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>闲谈1</title>
     <url>/posts/f483b24a.html</url>
     <content><![CDATA[<blockquote>
